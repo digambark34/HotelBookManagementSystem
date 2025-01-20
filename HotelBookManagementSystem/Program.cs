@@ -37,3 +37,9 @@ public interface IBookingManager
 
     void ViewBookings();
 }
+
+public abstract class HotelBase
+{
+    public List<Room> Rooms { get; set; }
+    public List<Booking> Bookings { get; set; }
+}
