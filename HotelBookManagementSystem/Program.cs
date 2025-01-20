@@ -30,3 +30,10 @@ public class Booking
         Console.WriteLine($"BookingID : {BookingId} - CustomerName : {CustomerName} - RoomNumber : {RoomNumber} CheckIndate : {CheckInDate} - CheckOutDate : {CheckOutDate} - TotalPrice : {TotalPrice} ");
     }
 }
+
+public interface IBookingManager
+{
+    void BookRoom(String CustomerName, int RoomNumber, DateTime CheckINDate, DateTime CheckOutDate);
+
+    void ViewBookings();
+}
