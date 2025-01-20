@@ -43,3 +43,16 @@ public abstract class HotelBase
     public List<Room> Rooms { get; set; }
     public List<Booking> Bookings { get; set; }
 }
+
+public class HotelBookingManager : HotelBase, IBookingManager
+{
+    private int BookingIdCounter = 1;
+
+    public delegate void BookingNotification(string Message);
+
+    public event BookingNotification onBookingsucess;
+
+    public HotelBookingManager()
+    {
+    }
+}
