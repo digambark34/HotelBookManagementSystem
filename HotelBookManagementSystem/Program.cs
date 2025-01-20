@@ -5,13 +5,28 @@ using System.Linq;
 
 public class Room
 {
-    public int Roomnumber { get; set; }
+    public int RoomNumber { get; set; }
     public string Type { get; set; }
     public Decimal Price { get; set; }
-    public bool Isavailable { get; set; }
+    public bool IsAvailable { get; set; }
 
     public void ShowRoomDetails()
     {
-        Console.WriteLine($"Roomnumber : {Roomnumber} - Type : {Type} -  Price : {Price} - Isavailable : {Isavailable} ");
+        Console.WriteLine($"Roomnumber : {RoomNumber} - Type : {Type} -  Price : {Price} - Isavailable : {IsAvailable} ");
+    }
+}
+
+public class Booking
+{
+    public int BookingId { get; set; }
+    public string CustomerName { get; set; }
+    public int RoomNumber { get; set; }
+    public DateTime CheckInDate { get; set; }
+    public DateTime CheckOutDate { get; set; }
+    public Decimal TotalPrice { get; set; }
+
+    public void ShowBookingDetails()
+    {
+        Console.WriteLine($"BookingID : {BookingId} - CustomerName : {CustomerName} - RoomNumber : {RoomNumber} CheckIndate : {CheckInDate} - CheckOutDate : {CheckOutDate} - TotalPrice : {TotalPrice} ");
     }
 }
